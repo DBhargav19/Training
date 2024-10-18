@@ -21,11 +21,7 @@ steps:
 - task: UiPathInstallPlatform@4
   inputs:
     cliVersion: 'WIN_23.10.8894.39673'
-- task: UiPathDeploy@4
-  inputs:
-    orchestratorConnection: 'Training Demo'
-    packagesPath: '$(Build.ArtifactStagingDirectory)'
-    folderName: 'Test'
+
 - task: UiPathPack@4
   inputs:
     versionType: 'AutoVersion'
@@ -33,3 +29,8 @@ steps:
     orchestratorConnection: 'Training Demo'
     outputPath: '$(Build.ArtifactStagingDirectory)\Output'
     traceLevel: 'Verbose'
+- task: UiPathDeploy@4
+  inputs:
+    orchestratorConnection: 'Training Demo'
+    packagesPath: '$(Build.ArtifactStagingDirectory)'
+    folderName: 'Test'
