@@ -32,5 +32,5 @@ steps:
 - task: UiPathDeploy@4
   inputs:
     orchestratorConnection: 'Training Demo'
-    packagesPath: '$(Build.ArtifactStagingDirectory)'
+    packagesPath: '$(Build.ArtifactStagingDirectory)\Output'
     folderName: 'Test'
