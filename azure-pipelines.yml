@@ -25,7 +25,7 @@ steps:
 - task: UiPathPack@4
   inputs:
     versionType: 'AutoVersion'
-    projectJsonPath: '$(Build.ArtifactStagingDirectory)'
+    projectJsonPath: '$(Build.SourcesDirectory)'
     orchestratorConnection: 'Training Demo'
     outputPath: '$(Build.ArtifactStagingDirectory)\Output'
     traceLevel: 'Verbose'
