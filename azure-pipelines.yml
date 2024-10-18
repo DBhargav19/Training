@@ -7,7 +7,7 @@ trigger:
 - main
 
 pool:
-  vmImage: DESKTOP-1T973CK
+  vmImage: Default
 
 steps:
 - script: echo Hello, world!
