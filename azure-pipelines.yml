@@ -18,18 +18,18 @@ steps:
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
   
-- task: UiPathInstallPlatform@4
+- task: UiPathInstallPlatform@5
   inputs:
-    cliVersion: 'WIN_23.10.8894.39673'
+    cliVersion: 'WIN_24.10.9050.17872'
 
-- task: UiPathPack@4
+- task: UiPathPack@5
   inputs:
     versionType: 'AutoVersion'
     projectJsonPath: '$(Build.SourcesDirectory)'
     orchestratorConnection: 'Training Demo'
     outputPath: '$(Build.ArtifactStagingDirectory)\Output'
     traceLevel: 'Verbose'
-- task: UiPathDeploy@4
+- task: UiPathDeploy@5
   inputs:
     orchestratorConnection: 'Training Demo'
     packagesPath: '$(Build.ArtifactStagingDirectory)\Output'
