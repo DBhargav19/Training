@@ -7,7 +7,7 @@ trigger:
 - main
 
 pool:
-  Default
+  Azure Pipelines
 
 steps:
 - script: echo Hello, world!
@@ -18,19 +18,13 @@ steps:
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
   
-- task: UiPathInstallPlatform@5
+- task: UiPathInstallPlatform@6
   inputs:
     cliVersion: 'WIN_24.10.9050.17872'
-
-- task: UiPathPack@5
+- task: UiPathTest@6
   inputs:
-    versionType: 'AutoVersion'
-    projectJsonPath: '$(Build.SourcesDirectory)'
-    orchestratorConnection: 'Training Demo'
-    outputPath: '$(Build.ArtifactStagingDirectory)\Output'
-    traceLevel: 'Verbose'
-- task: UiPathDeploy@5
-  inputs:
-    orchestratorConnection: 'Training Demo'
-    packagesPath: '$(Build.ArtifactStagingDirectory)\Output'
-    folderName: 'Test'
+    testTarget: 'TestSet'
+    orchestratorConnection: 'demotesting'
+    projectKey: 'TEST'
+    testSet: 'Sample'
+    folderName: 'Shared'
