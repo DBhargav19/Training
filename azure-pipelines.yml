@@ -25,3 +25,4 @@ steps:
     projectKey: 'TEST'
     testSet: 'Sample'
     folderName: 'Shared'
+    traceLevel: 'Verbose'
