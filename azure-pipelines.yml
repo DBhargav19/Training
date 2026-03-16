@@ -23,6 +23,6 @@ steps:
     testTarget: 'TestSet'
     orchestratorConnection: 'demotesting'
     projectKey: 'TEST'
-    testSet: 'Sample'
+    testSet: 'TEST:76'
     folderName: 'Shared'
     traceLevel: 'Verbose'
