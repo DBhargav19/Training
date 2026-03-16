@@ -24,5 +24,4 @@ steps:
     orchestratorConnection: 'demotesting'
     projectKey: 'TEST'
     testSet: 'TEST:76'
-    folderName: 'Shared'
     traceLevel: 'Verbose'
